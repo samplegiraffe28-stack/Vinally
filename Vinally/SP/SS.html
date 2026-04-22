@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vinally</title>
+</head>
+<body>
+   <div class="page">
+
+        <button id="OpenBtn">Settings/About</button>
+        
+        <div class="Modal hidden" id="Modal">
+            <div class="Modal-content">
+                <span id="CloseBtn">&times;</span>
+                    
+                        <h2>About</h2>
+                        <p>I started this project as a way to do anything you can imagine to organize music. You can use a freeform workspace to find any song, then its up to the user what to do after that.Each element is added to expand the limits of what each user can do, and each element has its own seperate page if you want a deeper dive with one particular concept.</p>
+                        <h8>Note: this is run using free api keys and therefore have usage limits, seach results will work for a long while, but not forever.</h8>
+
+                        <h2>Settings</h2>
+
+                        <form id="Settingin">
+                            <h3>Theme</h3>
+                            <select name="Theme" id="ThemeSelector">
+                                <option value="Light">Light</option>
+                                <option value="Dark">Dark</option>
+                                <option value="Lapiz">Lapiz</option>
+                                <option value="Velvet">Red Velvet</option>
+                            </select>
+                            <button type="submit">Save</button>
+                        </form>
+
+                        
+
+
+                    </label>
+            </div>
+        </div>
+    
+
+    <div class="Main">
+        <img src="/IMG/Vinally_logo.png" alt="Vinally" class="Vlogo">
+        <h2>the everything music organizer</h2>
+        <a class="Start" href="/MP/MS.html">Enter The Sandbox</a>
+    </div>
+
+    <div class="ECR">
+        <a class="EC" id="Tierlist" href="/TL/TL.html">Tierlist</a>
+        <a class="EC" id="Tournament" href="/TO/TO.html">Tournament</a>
+        <a class="EC" id="SongRanker" href="/SR/SR.html">Song Ranker</a>
+        <a class="EC" id="SongAnalysis" class="Greyed" href="">Coming Soon</a>
+        <a class="EC" class="Greyed">Coming Soon</a>
+        <a class="EC" class="Greyed">Coming Soon</a>
+        <a class="EC" class="Greyed">Coming Soon</a>
+    </div>
+
+    </div>
+    <script src="SS.js"></script>
+    <script src="/Vinally/SHARED/Theme.js"></script>
+    <script>
+     const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      document.body.classList.add(savedTheme);
+      }
+    </script>
+</body>
+</html>

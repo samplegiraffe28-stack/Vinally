@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Song Ranker</title>
+    <link rel="stylesheet" href="SR.css">
+</head>
+<body>
+
+    <div class="CM hidden" id="SCCM">
+        <button class="closebtn" id="closeSC">&times;</button>
+        <button class= "SubmitSong" id="SubmitSong">Submit Songs</button>
+
+        <div class="search-bar">
+        <input id="searchInput" placeholder="Search for music">
+        <button id="searchButton">Search</button>
+        </div>
+
+        <div class="platform-container">
+         <div class="searchCats">
+        <section class="platform">
+        <h2>YouTube</h2>
+        <div class="deck" id="youtubeStack"></div>
+         </section>
+
+        <section class="platform">
+        <h2>Spotify</h2>
+        <div class="deck" id="spotifyStack"></div>
+         </section>
+        </div>
+        <div class="selection" id="selected">
+        <p id="PHS">Search for a song and add it to your collection</p>
+    </div>
+    </div>
+    </div>
+
+    <div class="CM hidden" id="tutorial">
+        <button class="closebtn" id="closeTT">&times;</button>
+        <div class="IM">
+        <h2 class="head">How to use the SongRanker</h2>
+        <ol>
+        <li>Create Song Cards</li>
+                <ol>
+                <h3 class="list">Song Card</h3>
+                <li>Begin by entering the name of any song into the search bar then click search</li>
+                <li>Three songs from both Youtube and Spotify will apear <p class="sub">*you can use the scrollwheel to see other cards in each pile</p></li>
+                <li>Select the songs you want on the page by clicking on them</li>
+                <li>You can see all of the songs you select on the bottom of the menu, scroll if you cant see them all</li>
+                <li>Press Submit Songs to place it on the page</li>
+                </ol>
+            <li>Drag cards between each other from number one (The top) to as far down as you want</li>
+            <li></li>
+        </ol>
+        </div>
+        </div>
+
+    <div class="everything">
+    <div class="buttons">
+        <a class = "Abutton" href="/SP/SS.html">Go Back</a>
+        <button class = "Abutton" id="openSC"> Create Song Cards </button>
+        <button class = "Abutton" id="TT">Tutorial</button>
+    </div>
+
+        <div class="droping" id="empty">
+
+        </div>
+
+    </div>
+    
+    <script src="/SHARED/Theme.js"></script>
+    <script src="/SR/SR.js"></script>
+    <script src="/SongCards/deck.js"></script>
+    <script src="/SongCards/cards.js"></script>
+    <script src="/SongCards/animation.js"></script>
+    <script src="/SongCards/api.js"></script>
+    <script src="/SongCards/main.js"></script>
+</body>
+</html>

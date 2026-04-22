@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinally</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="RCM" id="RCM">
+        <li data-action="createSC">Create Song Card</li>
+        <li data-action="createTL">Create Tier List</li>
+        <li data-action="createT">Create Tournament</li>
+        <li data-action="createC">Create Container</li>
+    </ul>
+
+    <ul class= "RCM" id="SCRCM">
+        <li data-action="deleteSC">Delete</li>
+        <li data-action="tutorial">Tutorial</li>
+    </ul>
+
+    <ul class="RCM" id="TLRCM">
+        <li data-action="tutorial">Tutorial</li>
+        <li data-action="deleteTL">Delete</li>
+    </ul>
+
+    <ul class="RCM" id="TRCM">
+        <li data-action="deleteT">Delete</li>
+        <li data-action="tutorial">Tutorial</li>
+    </ul>
+
+    <ul class="RCM" id="CRCM">
+        <li data-action="DeleteC">Delete</li>
+    </ul>
+
+    <div class="CM hidden" id="TT">
+        <button class="closebtn" id="closeTT">&times;</button>
+        <div class="IM">
+        <h2 class="head"> THIS IS HOW YOU USE THE SANDBOX</h2>
+        <ol>
+        <li>Right click <b>Anywhere</b> on the page, to create the right click menu</li>
+        <li>You can use the Right click menu or the buttons at the bottom of the page to begin creating an element</li>
+        <br>
+        <ol>
+        <h3 class="list">Song Card</h3>
+        <li>Begin by entering the name of any song into the search bar then click search</li>
+        <li>Three songs from both Youtube and Spotify will apear <p class="sub">*you can use the scrollwheel to see other cards in each pile</p></li>
+        <li>Select the songs you want on the page by clicking on them</li>
+        <li>You can see all of the songs you select on the bottom of the menu, scroll if you cant see them all</li>
+        <li>Press Submit Songs to place it on the page</li>
+        </ol>
+        <br>
+        <ol>
+        <h3 class="list">TierList</h3>
+        <li>In a tier list you can rank things, usually by letter grades</li>
+        <li>If you want to add another tier to the TierList click “add tier”</li>
+        <li>If you want to remove a tier click the button with the x through it</li>
+        <li>If you want to name the tier click on the name and type the name</li>
+        <li>When you are done with your TierList click “create tier” to place on the page.</li>
+        </ol>
+        <br>
+        <ol>
+        <h3 class="list">Tournament</h3>
+        <li>Select one of the presented options (2,4,8,16)<p class="sub">* this will decide how many songs you have space for</p></li>
+        <li>Click “Submit” to place on the page</li>
+        </ol>
+        <br>
+        <ol>
+        <h3 class="list">Container</h3>
+        <li>Selected the title of the container and type to name it</li>
+        <li>When done click “Submit” to place on page</li>
+        </ol>
+        <br>
+        <li>Each element has different behavior when on the page, one universal rule is dragging</li>
+        <li>If you click & hold on an element then move your mouse any element will follow your cursor</li>
+        <li>when you release your cursor the element will be placed at the cursor, or placed inside another element if applicable</li>
+        <li>If you want to delete an element right click an element and select "delete"</li>
+        <br>
+        <ol>
+            <h3 class="list">Song Card</h3>
+            <li>Can be dragged into the three other elements</li>
+        </ol>
+        <br>
+         <ol>
+            <h3 class="list">TierList</h3>
+            <li>Song Cards can be dragged into each tier</li>
+            <li>Song Cards can be dragged into any position within their respective tier</li>
+            <li>If there are too many song cards to see you can scroll in each tier row</li>
+        </ol>
+        <br>
+         <ol>
+            <h3 class="list">Tournament</h3>
+            <li>Song Cards can be dragged into each slot<p class="sub">* recommended filling the slots on the outside only</p></li>
+            <li>When two slots next to each other are filled, double click to select a winner</li>
+            <li>Continue until you have a final winner</li>
+        </ol>
+        <br>
+         <ol>
+            <h3 class="list">Container</h3>
+            <li>Song Cards can be dragged inside</li>
+        </ol>
+        </ol>
+        </div>
+    </div>
+
+    <div class="CM hidden" id="SCCM">
+        <button class="closebtn" id="closeSC">&times;</button>
+        <button class= "SubmitSong" id="SubmitSong">Submit Songs</button>
+
+        <div class="search-bar">
+        <input id="searchInput" placeholder="Search for music">
+        <button id="searchButton">Search</button>
+        </div>
+
+        <div class="platform-container">
+         <div class="searchCats">
+        <section class="platform">
+        <h2>YouTube</h2>
+        <div class="deck" id="youtubeStack"></div>
+         </section>
+
+        <section class="platform">
+        <h2>Spotify</h2>
+        <div class="deck" id="spotifyStack"></div>
+         </section>
+        </div>
+        <div class="selection" id="selected">
+        <p id="PHS">Search for a song and add it to your collection</p>
+        </div> 
+    </div>
+    </div>
+
+    <div class="CM hidden" id="TLCM">
+                    <button id="closeTL" class="closebtn">&times;</button>
+        <div class="modalH">
+            <h2>Create Tierlist</h2>
+        </div>
+            <div id="tiers"></div>
+
+            <div class="TLBTNF">
+            <button id = "addT">Add Tier</button>
+            <button id="SubmitTL">Create Tier List</button>
+            </div>
+    </div>
+
+    <div class="CM hidden" id="TCM">
+    <button id="closeT" class="closebtn">&times;</button>
+    <div class="action">
+            <button id="createBracket" onclick="createBracket()">Create</button>
+        </div>
+    
+    
+    <div class="section">
+    <div class="Tmodal">
+        <p>Select Size:</p>
+        <div class="sizeOptions">
+            <button onclick="setBracketS(2)">2</button>
+            <button onclick="setBracketS(4)">4</button>
+            <button onclick="setBracketS(8)">8</button>
+            <button onclick="setBracketS(16)">16</button>
+        </div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="BrPr"></div>
+    </div>
+    </div>
+    
+    <div class="CM hidden" id="CCM">
+
+    <button id="closeC" class="closebtn">&times;</button>
+
+        <div class="CCC">
+            <input type="text" id="Cname" placeholder="Container Name">
+
+            <div class="Cbox"></div>
+
+            <div class="CoS" id="CoS">Submit Container</div>
+        </div>
+    </div>
+
+    <footer>
+        <button id="CC" class="Abutton">Create Container</button>
+        <button id="TL" class="Abutton">Create Tierlist</button>
+        <div class="Abutton"><a id="GB" href="/SP/SS.html">Go Back</a></div>
+        <button id="CS" class="Abutton">Create Song Card</button>
+        <button id="CT" class="Abutton">Create Tournament</button>
+        <button id="torial" class="Abutton">Tutorial</button>
+    </footer>
+
+    <script src="JS/tournament.js"></script>
+    <script src="JS/Tierlist.js"></script>
+    <script src="/SHARED/Theme.js"></script>
+    <script src="JS/dragging.js"></script>
+    <script src="JS/Deck.js"></script>
+    <script src="JS/cards.js"></script>
+    <script src="JS/animation.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/Main.js"></script>
+</body>
+</html>

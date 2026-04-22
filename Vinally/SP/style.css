@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body.Light {
+    background-color: white;
+}
+body.Light .Main {
+    background-color: #f7f6f2;
+}
+body.Light .ECR {
+    background-color: #f7f6f2;
+}
+
+
+body.Dark {
+    background-color: #333;
+}
+body.Dark .Main {
+    background-color: #0f0f0e;
+    color: #E0E0E0
+}
+body.Dark .ECR {
+    background-color: #0f0f0e;
+}
+
+
+body.Lapiz {
+    background-color: #0A1628;
+}
+body.Lapiz .Main {
+    background-color: #1E3A8A;
+    border: #3B82F6 solid 2.5px;
+}
+body.Lapiz .ECR {
+    background-color: #1E3A8A;
+    border: #3B82F6 solid 2.5px;
+}
+
+
+body.Velvet {
+    background-color: #1C0A0D;
+}
+body.Velvet .Main {
+    background-color: #6B1A1A;
+    border: #D4AF37 solid 2.5px;
+}
+body.Velvet .ECR {
+    background-color: #6B1A1A;
+    border: #D4AF37 solid 2.5px;
+}
+
+.page {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f7f6f2;
+    border-radius: 40px;
+    margin: 20px;
+    min-height: 0;
+}
+
+.ECR {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    min-width: 0;
+    width: 97.5vw;
+
+    border-radius: 25px;
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.ECR::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ECR::-webkit-scrollbar-thumb {
+    background-color: #99061f;
+    border-radius: 10px;
+    border: #000000 solid 0.1px;
+}
+
+.EC {
+    flex: 0 0 250;
+    width: auto;
+
+    color: #000000;
+    font-size: 2rem;
+
+    aspect-ratio: 5/3;
+    background-color: #f7f6f2;
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    scroll-snap-align: start;
+    
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: #000000 solid 2.5px;
+}
+.EC:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.Vlogo {
+    width: 1250px;
+    height: auto;
+    object-fit: contain;
+}
+
+.Start {
+    background-color: #888888;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#OpenBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #d4d3d3;
+    color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#Tierlist {
+    background-color: #c62b2f;
+}
+
+#Tournament {
+    background-color: #3c8c78;
+}
+
+#SongRanker {
+    background-color: #23379b;
+}
+
+#SongAnalysis {
+    background-color: #6343a2;
+}
+
+.Modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal.hidden {
+    display: none;
+}
+
+.Modal-content {
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f7f6f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+#CloseBtn {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+h8 {
+    font-size: 12px;
+    color: #555;
+}
