@@ -29,7 +29,7 @@ async function searchYouTube(query) {
 };
 
 async function searchSpotify(query) {
-    const resp = await fetch(`http://localhost:3000/spotify-search?q=${encodeURIComponent(query)}`);
+    const resp = await fetch(`https://vinally-api.onrender.com/spotify-search?q=${encodeURIComponent(query)}`);
     const data = await resp.json();
     console.log(data);
     if (!data.tracks) return [];
