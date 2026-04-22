@@ -62,8 +62,6 @@ window.addEventListener("click", (e) => {
 const selector = document.getElementById("ThemeSelector");
 const form = document.getElementById("Settingin");
 
-const themes = ["Light", "Dark", "Lapiz", "Velvet"];
-
 function setTheme(theme) {
     document.body.classList.remove(...themes);
     document.body.classList.add(theme);
